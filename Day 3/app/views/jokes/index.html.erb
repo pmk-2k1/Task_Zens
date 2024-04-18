@@ -1,0 +1,39 @@
+<section id="main">
+  <div class="div_title">
+    <h1 class="content_title">A joke a day keeps the docter away</h1>
+    <p class="content_title1">if you joke wrong way, your teeth have to pay. (Serious)</p>
+  </div>
+  <div class="div_content">
+    <%@jokes.each do |jok|%>
+      <div class="jokes">
+        <div class ="content"><%=jok.content%></div>
+        <hr>
+        <div class="button_vote">
+          <%=button_to "This is Funny!", joke_like_path(jok.id), method: :post, class: "voteLike vote", onclick: "plusDivs()"%>
+          <%=button_to "This is not funny.", joke_dislike_path(jok.id), method: :post, class: "voteDisLike vote", onclick: "plusDivs()"%>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</section>
+
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  function plusDivs() {
+      showDivs((slideIndex += 1));
+  }
+
+  function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("jokes");
+      if (n > x.length) {
+          slideIndex = x.length;
+          alert("That's all the jokes for today! Come back another day!");
+      }
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+  }
+</script>

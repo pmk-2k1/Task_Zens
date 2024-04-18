@@ -1,0 +1,19 @@
+footer {
+  width: 100%;
+  height: 14rem;
+  position: static;
+  // top: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+
+  p.title {
+    padding: 25px 100px 0 100px;
+    margin: 0 300px;
+    opacity: 0.5;
+    text-align: center;
+    .in_dam{
+      font-weight: 600;
+    }
+  }
+}

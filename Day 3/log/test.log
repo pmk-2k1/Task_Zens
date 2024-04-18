@@ -1,0 +1,435 @@
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "jokes"[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "jokes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "like" integer DEFAULT 0, "dislike" integer DEFAULT 0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20240331152359)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2024-04-17 10:32:47.711928', '2024-04-17 10:32:47.711931')[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fb31ead5fdf69df556b35f08f579c6dedd1b8c0d', '2024-04-17 10:32:47.712769', '2024-04-17 10:32:47.712771')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.4ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:40:32.643689"], ["updated_at", "2024-04-18 09:40:32.643689"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:40:32 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1039)
+  Rendered layout layouts/application.html.erb (Duration: 3647.0ms | Allocations: 49984)
+Completed 500 Internal Server Error in 3662ms (ActiveRecord: 0.1ms | Allocations: 55230)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_re  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.6ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:41.988340"], ["updated_at", "2024-04-18 09:45:41.988340"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:41 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1039)
+  Rendered header/_header.html.erb (Duration: 0.8ms | Allocations: 632)
+  Rendered footer/_footer.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 2357.8ms | Allocations: 125698)
+Completed 200 OK in 2367ms (Views: 2360.1ms | ActiveRecord: 0.1ms | Allocations: 130984)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.410085"], ["updated_at", "2024-04-18 09:45:44.410085"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.0ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.5ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1642)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1926)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.418011"], ["updated_at", "2024-04-18 09:45:44.418011"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.9ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1639)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 1918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.428986"], ["updated_at", "2024-04-18 09:45:44.428986"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.0ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.3ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1639)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.438457"], ["updated_at", "2024-04-18 09:45:44.438457"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.4ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1639)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.446297"], ["updated_at", "2024-04-18 09:45:44.446297"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 1.0ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1639)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 1918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n\"How were people born?\" So his father said, \"Adam\nand Eve made babies, then their babies became\nadults and made babies, and so on.\" The child then\nwent to his mother, asked her the same question and\nshe told him, \"We were monkeys then we evolved to become\nlike we are now.\" The child ran back to his father and said,\n\"You lied to me!\" His father replied, \"No, your mom was\ntalking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.457492"], ["updated_at", "2024-04-18 09:45:44.457492"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.0ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.3ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1639)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.7ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n\"How were people born?\" So his father said, \"Adam\nand Eve made babies, then their babies became\nadults and made babies, and so on.\" The child then\nwent to his mother, asked her the same question and\nshe told him, \"We were monkeys then we evolved to become\nlike we are now.\" The child ran back to his father and said,\n\"You lied to me!\" His father replied, \"No, your mom was\ntalking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.466483"], ["updated_at", "2024-04-18 09:45:44.466483"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.4ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1639)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 1918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n\"How were people born?\" So his father said, \"Adam\nand Eve made babies, then their babies became\nadults and made babies, and so on.\" The child then\nwent to his mother, asked her the same question and\nshe told him, \"We were monkeys then we evolved to become\nlike we are now.\" The child ran back to his father and said,\n\"You lied to me!\" His father replied, \"No, your mom was\ntalking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.478041"], ["updated_at", "2024-04-18 09:45:44.478041"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.0ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.5ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1639)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n\"How were people born?\" So his father said, \"Adam\nand Eve made babies, then their babies became\nadults and made babies, and so on.\" The child then\nwent to his mother, asked her the same question and\nshe told him, \"We were monkeys then we evolved to become\nlike we are now.\" The child ran back to his father and said,\n\"You lied to me!\" His father replied, \"No, your mom was\ntalking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:45:44.491385"], ["updated_at", "2024-04-18 09:45:44.491385"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:45:44 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.3ms | Allocations: 470)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1639)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", ""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:46:44.767651"], ["updated_at", "2024-04-18 09:46:44.767651"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father, \"How were people born?\" So his father said, \"Adam and Eve made babies, then their babies became adults and made babies, and so on.\" The child then went to his mother, asked her the same question and she told him, \"We were monkeys then we evolved to become like we are now.\" The child ran back to his father and said, \"You lied to me!\" His father replied, \"No, your mom was talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:46:44.798674"], ["updated_at", "2024-04-18 09:46:44.798674"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "father"], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:46:44.800732"], ["updated_at", "2024-04-18 09:46:44.800732"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "The child"], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:46:44.802727"], ["updated_at", "2024-04-18 09:46:44.802727"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father, \"How were people born?\" So his father said, \"Adam and Eve made babies, then their babies became adults and made babies, and so on.\" The child then went to his mother, asked her the same question and she told him, \"We were monkeys then we evolved to become like we are now.\" The child ran back to his father and said, \"You lied to me!\" His father replied, \"No, your mom was talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:46:44.804829"], ["updated_at", "2024-04-18 09:46:44.804829"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father, \"How were people born?\" So his father said, \"Adam and Eve made babies, then their babies became adults and made babies, and so on.\" The child then went to his mother, asked her the same question and she told him, \"We were monkeys then we evolved to become like we are now.\" The child ran back to his father and said, \"You lied to me!\" His father replied, \"No, your mom was talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:47:22.821946"], ["updated_at", "2024-04-18 09:47:22.821946"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "father"], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:47:22.824500"], ["updated_at", "2024-04-18 09:47:22.824500"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "The child"], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:47:22.826500"], ["updated_at", "2024-04-18 09:47:22.826500"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father, \"How were people born?\" So his father said, \"Adam and Eve made babies, then their babies became adults and made babies, and so on.\" The child then went to his mother, asked her the same question and she told him, \"We were monkeys then we evolved to become like we are now.\" The child ran back to his father and said, \"You lied to me!\" His father replied, \"No, your mom was talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:47:22.829006"], ["updated_at", "2024-04-18 09:47:22.829006"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:18.715162"], ["updated_at", "2024-04-18 09:49:18.715162"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:18 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1037)
+  Rendered header/_header.html.erb (Duration: 0.9ms | Allocations: 740)
+  Rendered footer/_footer.html.erb (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 5434.9ms | Allocations: 104153)
+Completed 200 OK in 5444ms (Views: 5437.4ms | ActiveRecord: 0.1ms | Allocations: 109439)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.200908"], ["updated_at", "2024-04-18 09:49:24.200908"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.0ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.3ms | Allocations: 578)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1819)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 2103)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.208981"], ["updated_at", "2024-04-18 09:49:24.208981"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.0ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.5ms | Allocations: 578)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1819)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2098)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.217296"], ["updated_at", "2024-04-18 09:49:24.217296"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.4ms | Allocations: 578)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1819)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 2098)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.227143"], ["updated_at", "2024-04-18 09:49:24.227143"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.0ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.3ms | Allocations: 578)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1819)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 2098)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n  \"How were people born?\" So his father said, \"Adam\n  and Eve made babies, then their babies became\n  adults and made babies, and so on.\" The child then\n  went to his mother, asked her the same question and\n  she told him, \"We were monkeys then we evolved to become\n  like we are now.\" The child ran back to his father and said,\n  \"You lied to me!\" His father replied, \"No, your mom was\n  talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.234224"], ["updated_at", "2024-04-18 09:49:24.234224"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 2.8ms | Allocations: 578)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1819)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 2098)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.7ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n\"How were people born?\" So his father said, \"Adam\nand Eve made babies, then their babies became\nadults and made babies, and so on.\" The child then\nwent to his mother, asked her the same question and\nshe told him, \"We were monkeys then we evolved to become\nlike we are now.\" The child ran back to his father and said,\n\"You lied to me!\" His father replied, \"No, your mom was\ntalking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.269858"], ["updated_at", "2024-04-18 09:49:24.269858"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 3.6ms | Allocations: 578)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 1819)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 2098)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n\"How were people born?\" So his father said, \"Adam\nand Eve made babies, then their babies became\nadults and made babies, and so on.\" The child then\nwent to his mother, asked her the same question and\nshe told him, \"We were monkeys then we evolved to become\nlike we are now.\" The child ran back to his father and said,\n\"You lied to me!\" His father replied, \"No, your mom was\ntalking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.324135"], ["updated_at", "2024-04-18 09:49:24.324135"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.0ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.8ms | Allocations: 578)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1819)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2098)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n\"How were people born?\" So his father said, \"Adam\nand Eve made babies, then their babies became\nadults and made babies, and so on.\" The child then\nwent to his mother, asked her the same question and\nshe told him, \"We were monkeys then we evolved to become\nlike we are now.\" The child ran back to his father and said,\n\"You lied to me!\" His father replied, \"No, your mom was\ntalking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.337150"], ["updated_at", "2024-04-18 09:49:24.337150"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 0.5ms | Allocations: 578)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1819)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 2098)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father,\n\"How were people born?\" So his father said, \"Adam\nand Eve made babies, then their babies became\nadults and made babies, and so on.\" The child then\nwent to his mother, asked her the same question and\nshe told him, \"We were monkeys then we evolved to become\nlike we are now.\" The child ran back to his father and said,\n\"You lied to me!\" His father replied, \"No, your mom was\ntalking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:24.351892"], ["updated_at", "2024-04-18 09:49:24.351892"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-04-18 16:49:24 +0700
+Processing by JokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jokes/index.html.erb within layouts/application
+  [1m[36mJoke Load (0.1ms)[0m  [1m[34mSELECT "jokes".* FROM "jokes"[0m
+  Rendered jokes/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 311)
+  Rendered header/_header.html.erb (Duration: 2.6ms | Allocations: 579)
+  Rendered footer/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1820)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 2100)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father, \"How were people born?\" So his father said, \"Adam and Eve made babies, then their babies became adults and made babies, and so on.\" The child then went to his mother, asked her the same question and she told him, \"We were monkeys then we evolved to become like we are now.\" The child ran back to his father and said, \"You lied to me!\" His father replied, \"No, your mom was talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:39.729092"], ["updated_at", "2024-04-18 09:49:39.729092"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "father"], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:39.731485"], ["updated_at", "2024-04-18 09:49:39.731485"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.3ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "The child"], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:39.733369"], ["updated_at", "2024-04-18 09:49:39.733369"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mJoke Create (0.2ms)[0m  [1m[32mINSERT INTO "jokes" ("content", "like", "dislike", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "A child asked his father, \"How were people born?\" So his father said, \"Adam and Eve made babies, then their babies became adults and made babies, and so on.\" The child then went to his mother, asked her the same question and she told him, \"We were monkeys then we evolved to become like we are now.\" The child ran back to his father and said, \"You lied to me!\" His father replied, \"No, your mom was talking about her side of the family.\""], ["like", 0], ["dislike", 0], ["created_at", "2024-04-18 09:49:39.735798"], ["updated_at", "2024-04-18 09:49:39.735798"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
