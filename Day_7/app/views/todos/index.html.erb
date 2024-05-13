@@ -1,0 +1,53 @@
+<div class="nav-left">
+  <div class="div-nav-left info">
+    <%= link_to 'Xin chào '+ current_user.full_name, edit_user_path(current_user.id)%>
+  </div>
+  <div class="div-nav-left new-task">
+    <%=link_to "Thêm task mới", new_user_todo_path(current_user.id)%>
+  </div>
+  <div class="div-nav-left task-complete">
+    <%=link_to "Task đã hoàn thành", task_complete_path, method: :get%>
+  </div>
+  <div class="div-nav-left unfinished">
+    <%=link_to "Task chưa hoàn thành", root_path%>
+  </div>
+  <div class="div-nav-left sign-out">
+    <%=link_to "Đăng xuất", destroy_user_session_path, method: :delete, data: {turbo_method: :delete }%>
+  </div>
+</div>
+<div class="nav-right">
+  <div class="nav-right-head">
+    <p>Task chưa hoàn thành</p>
+  </div>
+  <div class="nav-right-main">
+    <div class="table-container">
+      <div class="table-task">
+        <table class="table table-hover table-striped tab">
+          <thead>
+            <tr>
+              <th scope="col">Tiêu đề</th>
+              <th scope="col">Ghi chú</th>
+              <th scope="col">Thời gian bắt đầu</th>
+              <th scope="col">Thời gian kết thúc</th>
+              <th scope="col">Tình trạng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%@unfinished_tasks.each do |todo|%>
+              <tr>
+                <td><%=link_to "#{todo.title}", edit_user_todo_path(current_user.id, todo.id), method: :get%></td>
+                <td><%=todo.note%></td>
+                <td><%=todo.time_start.strftime("%H:%M %d/%m/%Y")%></td>
+                <td><%=todo.time_complete.strftime("%H:%M %d/%m/%Y")%></td>
+                <%if todo.is_complete == false%>
+                  <td>Chưa hoàn thành</td>
+                <%end%>              
+              <td><%=button_to "Xóa", user_todo_path(current_user.id, todo.id), method: :delete, class: "destroy", data:{confirm: "Are you sure?" }%></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

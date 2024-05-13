@@ -1,0 +1,27 @@
+<div class="nav-left">
+  <div class="div-nav-left info">
+    <%= link_to 'Xin chào '+ current_user.full_name, edit_user_path(current_user.id)%>
+  </div>
+  <div class="div-nav-left new-task">
+    <%=link_to "Thêm task mới", new_user_todo_path(current_user.id)%>
+  </div>
+  <div class="div-nav-left task-complete">
+    <%=link_to "Task đã hoàn thành", task_complete_path, method: :get%>
+  </div>
+  <div class="div-nav-left unfinished">
+    <%=link_to "Task chưa hoàn thành", root_path%>
+  </div>
+  <div class="div-nav-left sign-out">
+    <%=link_to "Đăng xuất", destroy_user_session_path, method: :delete, data: {turbo_method: :delete }%>
+  </div>
+</div>
+<div class="nav-right">
+  <div class="nav-right-head">
+    <p>Chỉnh sửa task</p>
+  </div>
+  <div class="nav-right-main">
+      <div class="new-task">
+        <%= render "form_edit_todo"%>
+      </div>
+  </div>
+</div>
