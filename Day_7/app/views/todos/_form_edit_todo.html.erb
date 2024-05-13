@@ -1,0 +1,32 @@
+<%=form_with model: [:user, @todo] do |form|%>
+  <div class="field-head">
+    <div class="field-new">
+      <%= form.label :title, "Tiêu đề"%><br/>
+      <%= form.text_area :title, size: "50"%>
+    </div>
+    <div class="field-new">
+      <%= form.label :time_start, "Thời gian bắt đầu"%><br/>
+      <%= form.datetime_field :time_start%>
+    </div>
+  </div>
+  <div class="field-footer">
+    <div class="field-new">
+      <%= form.label :note, "Ghi chú"%><br/>
+      <%= form.text_area :note, size: "50x4"%>
+    </div>
+    <div class="field-new">
+      <%= form.label :time_complete, "Thời gian kết thúc"%><br/>
+      <%= form.datetime_field :time_complete%>
+    </div>
+  </div>
+  <div class="status-field">
+    <div class="field-new">
+      <%= form.label :is_complete, "Tình trạng"%><br/>
+      <%= form.select(:is_complete, options_for_select([["Chưa hoàn thành", false], ["Đã hoàn thành", true]]))%>
+      <%# <%= form.select :is_private, [["Chưa hoàn thành", false], ["Đã hoàn thành", true]]%>
+    </div>
+  </div>
+  <div class="actions">
+    <%= form.submit%>
+  </div>
+<%end%>
