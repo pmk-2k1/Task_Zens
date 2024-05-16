@@ -1,0 +1,305 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/password/reset":
+    post:
+      summary: create password_reset
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+  "/password/reset/edit":
+    get:
+      summary: edit password_reset
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update password_reset
+      parameters: []
+      responses:
+        '200':
+          description: successful
+  "/password":
+    patch:
+      summary: update password
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                password_confirmation:
+                  type: string
+  "/users/{user_id}/todo_lists":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: list todo_lists
+      tags:
+      - Todo List
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              examples:
+                example:
+                  value:
+                  - id: 1
+                    title: Day 8
+                    note: Hello world!!
+                    time_start: '2024-05-14'
+                    time_complete: '2024-05-17'
+                    is_complete: 'false'
+    post:
+      summary: create todo_list
+      tags:
+      - Posts
+      parameters: []
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              examples:
+                example:
+                  value:
+                  - id: 1
+                    title: Posts 1
+                    note: Hello world!!
+                    time_start: '2024-05-14'
+                    time_complete: '2024-05-15'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                note:
+                  type: string
+                time_start:
+                  type: string
+                time_complete:
+                  type: string
+  "/users/{user_id}/todo_lists/{id}":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show todo_list
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update todo_list
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                note:
+                  type: string
+                time_start:
+                  type: string
+                time_complete:
+                  type: string
+                is_complete:
+                  type: string
+    put:
+      summary: update todo_list
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                note:
+                  type: string
+                time_start:
+                  type: string
+                time_complete:
+                  type: string
+                is_complete:
+                  type: string
+    delete:
+      summary: delete todo_list
+      responses:
+        '200':
+          description: successful
+  "/":
+    get:
+      summary: list todo_lists
+      tags:
+      - Todo List
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              examples:
+                example:
+                  value:
+                  - id: 1
+                    title: Day 8
+                    note: Hello world!!
+                    time_start: '2024-05-14'
+                    time_complete: '2024-05-17'
+                    is_complete: 'false'
+  "/task_complete":
+    get:
+      summary: task_complete todo_list
+      tags:
+      - Todo List
+      responses:
+        '200':
+          description: successful
+  "/users":
+    post:
+      summary: create registration
+      tags:
+      - Registration
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              tyoe: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+                fullname:
+                  type: string
+              required:
+              - email
+              - password
+              - fullname
+    get:
+      summary: list users
+      tags:
+      - Users
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              examples:
+                example:
+                  value:
+                  - id: 1
+                    fullname: Khanh Phung
+                    email: khanhphung1801@gmail.com
+  "/users/sign_in":
+    post:
+      summary: Sign In
+      tags:
+      - Session
+      parameters: []
+      responses:
+        '201':
+          description: sign in
+      requestBody:
+        content:
+          application/json:
+            schema:
+              tyoe: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - email
+              - password
+  "/users/sign_out":
+    delete:
+      summary: delete session
+      responses:
+        '200':
+          description: successful
+  "/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fullname:
+                  type: string
+                email:
+                  type: string
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3000
