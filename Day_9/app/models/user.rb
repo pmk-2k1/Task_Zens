@@ -11,6 +11,8 @@ class User < ApplicationRecord
                     format: { with: /\A[\w+_.]+@[a-z\d]+\.[a-z]+\z/i }
   validates :admin, inclusion: [true, false]
 
+  has_many :todo_lists
+
   def jwt_payload
     super
   end

@@ -12,14 +12,15 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def respond_with(_resource, _options = {})
-    access_token = jwt_encode(user_id: current_user.id)
+    # access_token = jwt_encode(user_id: current_user.id)
     render json: {
       status: { code: 200, message: 'User signed in successfully',
-                data: {
-                  email: current_user.email,
-                  fullname: current_user.fullname,
-                  access_token: access_token
-                } }
+                data: 
+                  # email: current_user.email,
+                  # fullname: current_user.fullname
+                  current_user
+                  # access_token: access_token
+                } 
     }, status: :ok
   end
 
